@@ -1,0 +1,7 @@
+{
+  "name": "Remix: Remix: Remix: HealthCare Companion",
+  "description": "Your Smart Health Assistant for managing medicines, tracking health, finding nearby hospitals, ordering medicines, and mental wellness.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

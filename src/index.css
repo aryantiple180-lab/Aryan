@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-blue: #00f3ff;
+  --color-neon-green: #00ff66;
+  --color-neon-purple: #b026ff;
+  --color-neon-pink: #ff007f;
+  --color-dark-bg: #050a1f;
+  --color-dark-card: rgba(10, 15, 40, 0.6);
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+  .neon-text-blue {
+    text-shadow: 0 0 10px var(--color-neon-blue), 0 0 20px var(--color-neon-blue);
+    color: var(--color-neon-blue);
+  }
+  .neon-text-green {
+    text-shadow: 0 0 10px var(--color-neon-green), 0 0 20px var(--color-neon-green);
+    color: var(--color-neon-green);
+  }
+  .neon-text-purple {
+    text-shadow: 0 0 10px var(--color-neon-purple), 0 0 20px var(--color-neon-purple);
+    color: var(--color-neon-purple);
+  }
+  .neon-border-blue {
+    box-shadow: 0 0 10px var(--color-neon-blue), inset 0 0 10px var(--color-neon-blue);
+    border-color: var(--color-neon-blue);
+  }
+  .neon-border-green {
+    box-shadow: 0 0 10px var(--color-neon-green), inset 0 0 10px var(--color-neon-green);
+    border-color: var(--color-neon-green);
+  }
+  .neon-border-purple {
+    box-shadow: 0 0 10px var(--color-neon-purple), inset 0 0 10px var(--color-neon-purple);
+    border-color: var(--color-neon-purple);
+  }
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: #e2e8f0;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 243, 255, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 243, 255, 0.6);
+}
+
+/* Leaflet Custom Popup Styles */
+.leaflet-popup-content-wrapper {
+  background: rgba(5, 10, 31, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.2) !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(5, 10, 31, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.custom-popup .font-bold {
+  color: #00f3ff !important;
+  font-size: 14px;
+}
+
+.custom-popup .text-xs {
+  color: #9ca3af !important;
+}
+
+.leaflet-container {
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.leaflet-control-attribution a {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
